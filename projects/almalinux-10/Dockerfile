@@ -39,16 +39,17 @@ RUN dnf install -y \
     yum clean all && \
     rm -rf /var/cache/yum /tmp/*
 
-RUN dnf install -y \
-        dnf-plugin-config-manager \
-    && \
-    rpm --import https://packages.irods.org/irods-signing-key.asc && \
-    dnf config-manager -y --add-repo https://packages.irods.org/renci-irods.yum.repo && \
-    dnf config-manager -y --set-enabled renci-irods && \
-    rpm --import https://core-dev.irods.org/irods-core-dev-signing-key.asc && \
-    dnf config-manager -y --add-repo https://core-dev.irods.org/renci-irods-core-dev.yum.repo && \
-    dnf config-manager -y --set-enabled renci-irods-core-dev && \
-    rm -rf /tmp/*
+# Uncomment/adjust once externals are present for EL10
+#RUN dnf install -y \
+#        dnf-plugin-config-manager \
+#    && \
+#    rpm --import https://packages.irods.org/irods-signing-key.asc && \
+#    dnf config-manager -y --add-repo https://packages.irods.org/renci-irods.yum.repo && \
+#    dnf config-manager -y --set-enabled renci-irods && \
+#    rpm --import https://core-dev.irods.org/irods-core-dev-signing-key.asc && \
+#    dnf config-manager -y --add-repo https://core-dev.irods.org/renci-irods-core-dev.yum.repo && \
+#    dnf config-manager -y --set-enabled renci-irods-core-dev && \
+#    rm -rf /tmp/*
 
 RUN python3 -m pip install unittest-xml-reporting
 
