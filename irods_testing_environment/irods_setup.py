@@ -1179,7 +1179,7 @@ def setup_irods_catalog_consumers(ctx,
         service_names=[context.irods_catalog_consumer_service()])
 
     if consumer_service_instances:
-        if len(consumer_service_instances) is 0:
+        if len(consumer_service_instances) == 0:
             logging.warning('empty list of iRODS catalog service consumers to set up')
             return
 
