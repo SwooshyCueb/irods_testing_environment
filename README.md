@@ -3,16 +3,12 @@
 This repository provides a series of [Docker Compose](https://docs.docker.com/compose/) files which are intended for use in a test framework - which may or may not exist at the time of writing - for [iRODS](https://irods.org). 
 
 For each combination of supported OS platform/version and database type/version, there is a Compose project on which to run an iRODS deployment (*for testing*). The following OS platform Docker image tags are currently supported:
- - almalinux:8
  - almalinux:9
  - almalinux:10
- - rockylinux/rockylinux:8
  - rockylinux/rockylinux:9
  - rockylinux/rockylinux:10
- - debian:11
  - debian:12
  - debian:13
- - ubuntu:20.04
  - ubuntu:22.04
  - ubuntu:24.04
 
@@ -20,7 +16,6 @@ The following database Docker image tags are currently supported (although not f
  - postgres:14
  - postgres:16
  - postgres:17
- - mariadb:10.6
  - mariadb:10.11
  - mariadb:11.4
  - mariadb:11.8
@@ -105,10 +100,10 @@ The test hooks generally have the following requirements:
  - Path to local directory with built plugin packages (passed by `--built_packages_root_directory`)
    - Inside the root directory, the `os_specific_directory` must exist and contain the appropriate packages
      - The `os_specific_directory` must be named like this (image tag -> directory name):
-       - ubuntu:20.04  ->  `Ubuntu_20`
        - ubuntu:22.04  ->  `Ubuntu_22`
+       - ubuntu:24.04  ->  `Ubuntu_24`
        - rockylinux/rockylinux:9  ->  `Rocky linux_9`
-       - debian:11     ->  `Debian gnu_linux_11`
+       - debian:13     ->  `Debian gnu_linux_13`
  - iRODS server is already installed and setup
 
 Your provided built packages should be in an identical directory or symlink following the naming convention above. The directory for your plugin packages might look something like this, where each platform has a directory which contains built packages for the target plugin:
