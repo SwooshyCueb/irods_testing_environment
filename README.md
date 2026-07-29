@@ -15,17 +15,21 @@ For each combination of supported OS platform/version and database type/version,
  - ubuntu:20.04
  - ubuntu:22.04
  - ubuntu:24.04
+ - ubuntu:26.04
 
 The following database Docker image tags are currently supported (although not for all platforms):
  - postgres:14
  - postgres:16
  - postgres:17
+ - postgres:18
  - mariadb:10.6
  - mariadb:10.11
  - mariadb:11.4
  - mariadb:11.8
+ - mariadb:12.3
  - mysql:8.0
  - mysql:8.4
+ - mysql:9.7
 
 ## Requirements
 

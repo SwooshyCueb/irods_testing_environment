@@ -112,6 +112,33 @@ def configure_odbc_driver_ubuntu_2404_postgres_17(csp_container, odbc_driver):
     """
     configure_postgres_odbc_driver(csp_container, odbc_driver)
 
+def configure_odbc_driver_ubuntu_2604_postgres_16(csp_container, odbc_driver):
+    """Configure ODBC driver for postgres 16 on ubuntu 26.04.
+
+    Argument:
+    csp_container -- docker container on which the iRODS catalog service provider is running
+    odbc_driver -- path to local archive file containing the ODBC driver package
+    """
+    configure_postgres_odbc_driver(csp_container, odbc_driver)
+
+def configure_odbc_driver_ubuntu_2604_postgres_17(csp_container, odbc_driver):
+    """Configure ODBC driver for postgres 17 on ubuntu 26.04.
+
+    Argument:
+    csp_container -- docker container on which the iRODS catalog service provider is running
+    odbc_driver -- path to local archive file containing the ODBC driver package
+    """
+    configure_postgres_odbc_driver(csp_container, odbc_driver)
+
+def configure_odbc_driver_ubuntu_2604_postgres_18(csp_container, odbc_driver):
+    """Configure ODBC driver for postgres 18 on ubuntu 26.04.
+
+    Argument:
+    csp_container -- docker container on which the iRODS catalog service provider is running
+    odbc_driver -- path to local archive file containing the ODBC driver package
+    """
+    configure_postgres_odbc_driver(csp_container, odbc_driver)
+
 def configure_odbc_driver_debian_11_postgres_14(csp_container, odbc_driver):
     """Configure ODBC driver for postgres 14 on debian 11.
 
@@ -416,6 +443,19 @@ def configure_odbc_driver_mysql_84(csp_container, odbc_driver):
 
     configure_mysql_odbc_driver(csp_container, os.path.abspath(odbc_driver))
 
+def configure_odbc_driver_mysql_97(csp_container, odbc_driver):
+    """Configure ODBC driver for mysql 9.7.
+
+    Argument:
+    csp_container -- docker container on which the iRODS catalog service provider is running
+    odbc_driver -- path to local archive file containing the ODBC driver package
+    """
+    if not odbc_driver:
+        odbc_driver = download_mysql_odbc_driver(
+            'https://dev.mysql.com/get/Downloads/Connector-ODBC/9.7/mysql-connector-odbc-9.7.0-linux-glibc2.28-x86-64bit.tar.gz')
+
+    configure_mysql_odbc_driver(csp_container, os.path.abspath(odbc_driver))
+
 def configure_odbc_driver_ubuntu_2004_mysql_80(csp_container, odbc_driver):
     """Configure ODBC driver for mysql 8.0 on ubuntu 20.04.
 
@@ -460,6 +500,24 @@ def configure_odbc_driver_ubuntu_2404_mysql_84(csp_container, odbc_driver):
     odbc_driver -- path to local archive file containing the ODBC driver package
     """
     configure_odbc_driver_mysql_84(csp_container, odbc_driver)
+
+def configure_odbc_driver_ubuntu_2604_mysql_84(csp_container, odbc_driver):
+    """Configure ODBC driver for mysql 8.4 on ubuntu 26.04.
+
+    Argument:
+    csp_container -- docker container on which the iRODS catalog service provider is running
+    odbc_driver -- path to local archive file containing the ODBC driver package
+    """
+    configure_odbc_driver_mysql_84(csp_container, odbc_driver)
+
+def configure_odbc_driver_ubuntu_2604_mysql_97(csp_container, odbc_driver):
+    """Configure ODBC driver for mysql 9.7 on ubuntu 26.04.
+
+    Argument:
+    csp_container -- docker container on which the iRODS catalog service provider is running
+    odbc_driver -- path to local archive file containing the ODBC driver package
+    """
+    configure_odbc_driver_mysql_97(csp_container, odbc_driver)
 
 def configure_odbc_driver_debian_11_mysql_80(csp_container, odbc_driver):
     """Configure ODBC driver for mysql 8.0 on debian 11.
@@ -792,6 +850,55 @@ def configure_odbc_driver_ubuntu_2404_mariadb_118(csp_container, odbc_driver):
     odbc_driver -- path to local archive file containing the ODBC driver package
     """
     configure_odbc_driver_ubuntu_2404_mariadb(csp_container, odbc_driver)
+
+def configure_odbc_driver_ubuntu_2604_mariadb(csp_container, odbc_driver):
+    """Configure ODBC driver for mariadb on ubuntu 26.04.
+
+    Argument:
+    csp_container -- docker container on which the iRODS catalog service provider is running
+    odbc_driver -- path to local archive file containing the ODBC driver package
+    """
+    configure_mariadb_odbc_driver_apt(
+        csp_container,
+        odbc_driver,
+        # TODO(#303): Update to a package for 26.04 when one is available
+        'https://dlm.mariadb.com/4785795/Connectors/odbc/connector-odbc-3.2.9/codbc-amd64-ubuntu-24.04/mariadb-connector-odbc_3.2.9-1+maria~noble_amd64.deb')
+
+def configure_odbc_driver_ubuntu_2604_mariadb_1011(csp_container, odbc_driver):
+    """Configure ODBC driver for mariadb 10.11 on ubuntu 26.04.
+
+    Argument:
+    csp_container -- docker container on which the iRODS catalog service provider is running
+    odbc_driver -- path to local archive file containing the ODBC driver package
+    """
+    configure_odbc_driver_ubuntu_2604_mariadb(csp_container, odbc_driver)
+
+def configure_odbc_driver_ubuntu_2604_mariadb_114(csp_container, odbc_driver):
+    """Configure ODBC driver for mariadb 11.4 on ubuntu 26.04.
+
+    Argument:
+    csp_container -- docker container on which the iRODS catalog service provider is running
+    odbc_driver -- path to local archive file containing the ODBC driver package
+    """
+    configure_odbc_driver_ubuntu_2604_mariadb(csp_container, odbc_driver)
+
+def configure_odbc_driver_ubuntu_2604_mariadb_118(csp_container, odbc_driver):
+    """Configure ODBC driver for mariadb 11.8 on ubuntu 26.04.
+
+    Argument:
+    csp_container -- docker container on which the iRODS catalog service provider is running
+    odbc_driver -- path to local archive file containing the ODBC driver package
+    """
+    configure_odbc_driver_ubuntu_2604_mariadb(csp_container, odbc_driver)
+
+def configure_odbc_driver_ubuntu_2604_mariadb_123(csp_container, odbc_driver):
+    """Configure ODBC driver for mariadb 12.3 on ubuntu 26.04.
+
+    Argument:
+    csp_container -- docker container on which the iRODS catalog service provider is running
+    odbc_driver -- path to local archive file containing the ODBC driver package
+    """
+    configure_odbc_driver_ubuntu_2604_mariadb(csp_container, odbc_driver)
 
 def configure_odbc_driver_debian_11_mariadb(csp_container, odbc_driver):
     """Configure ODBC driver for mariadb on debian 11.
