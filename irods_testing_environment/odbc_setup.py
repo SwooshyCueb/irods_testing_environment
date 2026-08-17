@@ -753,7 +753,7 @@ def configure_odbc_driver_ubuntu_2004_mariadb(csp_container, odbc_driver):
     configure_mariadb_odbc_driver_apt(
         csp_container,
         odbc_driver,
-        'https://downloads.mariadb.com/Connectors/odbc/connector-odbc-3.2.2/mariadb-connector-odbc-3.2.2-ubu2004-amd64.deb')
+        'https://dlm.mariadb.com/4275270/Connectors/odbc/connector-odbc-3.2.6/mariadb-connector-odbc_3.2.6-1+maria~focal_amd64.deb')
 
 def configure_odbc_driver_ubuntu_2004_mariadb_106(csp_container, odbc_driver):
     """Configure ODBC driver for mariadb 10.6 on ubuntu 20.04.
@@ -783,7 +783,7 @@ def configure_odbc_driver_ubuntu_2204_mariadb(csp_container, odbc_driver):
     configure_mariadb_odbc_driver_apt(
         csp_container,
         odbc_driver,
-        'https://downloads.mariadb.com/Connectors/odbc/connector-odbc-3.2.2/mariadb-connector-odbc-3.2.2-ubu2204-amd64.deb')
+        'https://dlm.mariadb.com/4785854/Connectors/odbc/connector-odbc-3.2.9/codbc-amd64-ubuntu-22.04/mariadb-connector-odbc_3.2.9-1+maria~jammy_amd64.deb')
 
 def configure_odbc_driver_ubuntu_2204_mariadb_106(csp_container, odbc_driver):
     """Configure ODBC driver for mariadb 10.6 on ubuntu 22.04.
@@ -822,7 +822,7 @@ def configure_odbc_driver_ubuntu_2404_mariadb(csp_container, odbc_driver):
     configure_mariadb_odbc_driver_apt(
         csp_container,
         odbc_driver,
-        'https://downloads.mariadb.com/Connectors/odbc/connector-odbc-3.2.6/mariadb-connector-odbc_3.2.6-1+maria~noble_amd64.deb')
+        'https://dlm.mariadb.com/4785795/Connectors/odbc/connector-odbc-3.2.9/codbc-amd64-ubuntu-24.04/mariadb-connector-odbc_3.2.9-1+maria~noble_amd64.deb')
 
 def configure_odbc_driver_ubuntu_2404_mariadb_1011(csp_container, odbc_driver):
     """Configure ODBC driver for mariadb 10.11 on ubuntu 24.04.
@@ -910,7 +910,7 @@ def configure_odbc_driver_debian_11_mariadb(csp_container, odbc_driver):
     configure_mariadb_odbc_driver_apt(
         csp_container,
         odbc_driver,
-        'https://downloads.mariadb.com/Connectors/odbc/connector-odbc-3.2.2/mariadb-connector-odbc-3.2.2-deb11-amd64.deb')
+        'https://dlm.mariadb.com/4785819/Connectors/odbc/connector-odbc-3.2.9/codbc-amd64-debian-11/mariadb-connector-odbc_3.2.9-1+maria~bullseye_amd64.deb')
 
 def configure_odbc_driver_debian_11_mariadb_106(csp_container, odbc_driver):
     """Configure ODBC driver for mariadb 10.6 debian 11.
@@ -940,7 +940,7 @@ def configure_odbc_driver_debian_12_mariadb(csp_container, odbc_driver):
     configure_mariadb_odbc_driver_apt(
         csp_container,
         odbc_driver,
-        'https://downloads.mariadb.com/Connectors/odbc/connector-odbc-3.2.6/mariadb-connector-odbc_3.2.6-1+maria~bookworm_amd64.deb')
+        'https://dlm.mariadb.com/4785802/Connectors/odbc/connector-odbc-3.2.9/codbc-amd64-debian-12/mariadb-connector-odbc_3.2.9-1+maria~bookworm_amd64.deb')
 
 def configure_odbc_driver_debian_12_mariadb_1011(csp_container, odbc_driver):
     """Configure ODBC driver for mariadb 10.11 debian 12.
@@ -979,8 +979,7 @@ def configure_odbc_driver_debian_13_mariadb(csp_container, odbc_driver):
     configure_mariadb_odbc_driver_apt(
         csp_container,
         odbc_driver,
-        # Package is for Debian 12
-        'https://downloads.mariadb.com/Connectors/odbc/connector-odbc-3.2.6/mariadb-connector-odbc_3.2.6-1+maria~bookworm_amd64.deb')
+        'https://dlm.mariadb.com/4785812/Connectors/odbc/connector-odbc-3.2.9/codbc-amd64-debian-13/mariadb-connector-odbc_3.2.9-1+maria~trixie_amd64.deb')
 
 def configure_odbc_driver_debian_13_mariadb_114(csp_container, odbc_driver):
     """Configure ODBC driver for mariadb 11.4 debian 13.
@@ -1010,7 +1009,7 @@ def configure_odbc_driver_el_8_mariadb(csp_container, odbc_driver):
     configure_mariadb_odbc_driver_dnf(
         csp_container,
         odbc_driver,
-        'https://downloads.mariadb.com/Connectors/odbc/connector-odbc-3.2.2/mariadb-connector-odbc-3.2.2-rhel8-amd64.rpm')
+        'https://dlm.mariadb.com/4785777/Connectors/odbc/connector-odbc-3.2.9/codbc-amd64-rhel-8/mariadb-connector-odbc-3.2.9-1.el8.x86_64.rpm')
 
 def configure_odbc_driver_almalinux_8_mariadb_106(csp_container, odbc_driver):
     """Configure ODBC driver for mariadb 10.6 almalinux 8.
@@ -1076,7 +1075,7 @@ def configure_odbc_driver_el_9_mariadb(csp_container, odbc_driver):
     configure_mariadb_odbc_driver_dnf(
         csp_container,
         odbc_driver,
-        'https://downloads.mariadb.com/Connectors/odbc/connector-odbc-3.2.6/mariadb-connector-odbc-3.2.6-1.el9.x86_64.rpm')
+        'https://dlm.mariadb.com/4785763/Connectors/odbc/connector-odbc-3.2.9/codbc-amd64-rhel-9/mariadb-connector-odbc-3.2.9-1.el9.x86_64.rpm')
 
 def configure_odbc_driver_almalinux_9_mariadb_1011(csp_container, odbc_driver):
     """Configure ODBC driver for mariadb 10.11 almalinux 9.
@@ -1142,8 +1141,7 @@ def configure_odbc_driver_el_10_mariadb(csp_container, odbc_driver):
     configure_mariadb_odbc_driver_dnf(
         csp_container,
         odbc_driver,
-        # package is for EL9
-        'https://downloads.mariadb.com/Connectors/odbc/connector-odbc-3.2.6/mariadb-connector-odbc-3.2.6-1.el9.x86_64.rpm')
+        'https://dlm.mariadb.com/4785863/Connectors/odbc/connector-odbc-3.2.9/codbc-amd64-rhel-10/mariadb-connector-odbc-3.2.9-1.el10.x86_64.rpm')
 
 def configure_odbc_driver_almalinux_10_mariadb_114(csp_container, odbc_driver):
     """Configure ODBC driver for mariadb 11.4 almalinux 10.
